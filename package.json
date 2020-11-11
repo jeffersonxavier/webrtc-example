@@ -1,0 +1,19 @@
+{
+  "name": "webrtc-example",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "git@github.com:jeffersonxavier/webrtc-example.git",
+  "author": "Jefferson Xavier <jeffersonx.xavier@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
