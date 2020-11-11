@@ -31,12 +31,12 @@ io.on('connection', (socket) => {
 
   // Send Answer From Offer Request
   socket.on('answer', (socketId, description) => {
-    socket.to(socketId).emit('answer', socket.id, description);
+    socket.to(socketId).emit('answer', description);
   });
 
   // Send Signals to Establish the Communication Channel
-  socket.on('candidate', (socketId, signal) => {
-    socket.to(socketId).emit('candidate', socket.id, signal);
+  socket.on('candidate', (socketId, candidate) => {
+    socket.to(socketId).emit('candidate', candidate);
   });
 
   // Remove client when socket is disconnected
