@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebRTC Example</title>
+
+  <style>
+    #video-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fill, 400px);
+      grid-auto-rows: 400px;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js" type="module"></script>
+</head>
+<body>
+  <h1>Hello!</h1>
+
+  <!-- My Video and Remote Video from connection -->
+  <div id="video-grid">
+    <video playsinline autoplay muted id="local-video"></video>
+    <video playsinline autoplay id="remote-video"></video>
+  </div>
+
+  <!-- Input to send messages -->
+  <div>
+    <span style="font-weight: bold">Message: </span>
+    <input type="text" id="message-input" title="Message to Send!">
+    <button id="message-button">Send</button>
+  </div>
+
+  <!-- Area to Print Images -->
+  <div class="messages"></div>
+</body>
+</html>
